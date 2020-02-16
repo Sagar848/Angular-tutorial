@@ -1,2 +1,4 @@
-<h3 [ngStyle]="{backgroundColor: getColor()}">{{'Server'}} details are : id = {{serverId}}, status = {{serverStatus}}</h3>
+<h3 [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass] = "{onlineClass : serverStatus === 'online'}"
+>{{'Server'}} details are : id = {{serverId}}, status = {{serverStatus}}</h3>
 <div class="container">Return by function is {{getServerStatus()}}</div>
