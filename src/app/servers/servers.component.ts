@@ -9,6 +9,7 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'NO Server was created';
   updateServerName = '';
+  serverButtonClickDirective = false;
 
   constructor() { 
 
@@ -22,6 +23,7 @@ export class ServersComponent implements OnInit {
   }
 
   onServerCreation(){
+    this.serverButtonClickDirective = true;
     this.serverCreationStatus = 'Server was created by = ' + this.updateServerName;
   }
 
