@@ -1,0 +1,18 @@
+<div class="container">
+     <div class="row">
+        <div class="col-xs-12">
+            <label>Click this button</label>
+            <button (click)="togglePara()">Click to add</button>
+            <p *ngIf='buttonClickStatus'>this is displayed when button is clicked</p>
+
+            <p *ngFor="let buttonClickVal of buttonClickArray"
+            [ngStyle]="{backgroundColor: buttonClickVal >= 5 ? 'blue' : 'transparent'}"
+            [ngClass]="{buttonClickClass : buttonClickVal >=5}">
+                value is {{buttonClickVal}}
+            </p>
+        </div>
+     </div> 
+</div>
+
+
+
