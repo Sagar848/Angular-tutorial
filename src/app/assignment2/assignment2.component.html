@@ -1,0 +1,11 @@
+<input type="text" class="form-control" [(ngModel)]="UserName">
+<p> This is {{ UserName }}</p>
+<button class="btn btn-primary" [disabled]="isUserNameEmpty()" (click)="updateUserName()">Click here</button>
+<div class="container">
+    <div class="row">
+        <button class="btn btn-primary" [disabled]="UserName === ''" (click)="UserName = ''">Click here</button>
+    </div>
+</div>
+
+
+<p>{{ buttonClickStatus }}</p>
