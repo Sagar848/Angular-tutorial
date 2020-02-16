@@ -10,6 +10,20 @@
             [ngClass]="{buttonClickClass : buttonClickVal >=5}">
                 value is {{buttonClickVal}}
             </p>
+            <div ngClass=normalClass>value</div>
+        </div>
+
+        <div class="col-xs-12">
+            <label>Click this button</label>
+            <button (click)="togglePara2()" class="btn btn-primary">Click to add</button>
+            <p *ngIf='buttonClickStatus2'>this is displayed when button is clicked</p>
+
+            <p *ngFor="let buttonClickVal2 of buttonClickArray2; let i = index"
+            [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+            [ngClass]="{buttonClickClass : i >=4}">
+                value is {{buttonClickVal2}}
+            </p>
+            <div ngClass=normalClass>value</div>
         </div>
      </div> 
 </div>
