@@ -14,5 +14,5 @@
 <p *ngIf=serverButtonClickDirective>The server was created and value is = {{ updateServerName }}</p>
 
 
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let serveratIndex of servers"></app-server>
+<!-- <app-server></app-server> -->
